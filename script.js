@@ -2,8 +2,8 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-		searchText: " ",
-		users: []
+			searchText: " ",
+			users: []
 		};
 	}
 
@@ -26,10 +26,11 @@ class App extends React.Component {
 				<form onSubmit={event => this.onSubmit(event)}>
 					<label htmlForm="searchText">Search by user name </label>
 					<input
-					type="text"
-					id="searchText"
-					onChange={event => this.onChangeHandle(event)}
-					value={this.state.searchText}/>
+						type="text"
+						id="searchText"
+						onChange={event => this.onChangeHandle(event)}
+						value={this.state.searchText}
+					/>
 				</form>
 				<UsersList users={this.state.users}/>
 			</div>
@@ -45,7 +46,7 @@ class UsersList extends React.Component {
 	render() {
 		return (
 			<div>
-			{this.users}
+				{this.users}
 			</div>
 		);
 	}
